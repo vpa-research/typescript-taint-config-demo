@@ -10,16 +10,20 @@ library std
 
 import @ohos/file/fs;
 
+import vulnerabilities/js;
+
 
 // automata
 
 automaton ohos_file_fs
 (
 )
-: ohos_file_fs // #problem: this is a namespace "type"
+: ohos_file_fs
 {
+    initstate Initialized;
+    shift Initialized -> self []; // unused
 
-    // #question: how to put/associate this with "@ohos.file.fs::accessSync" ?
+
     static fun *.accessSync (path: string): boolean
     {
         action COPY_MARKS(path, result);
@@ -28,15 +32,15 @@ automaton ohos_file_fs
 
     static fun *.createStreamSync (path: string, mode: string): ohos_file_fs_Stream
     {
-        if (mode == "r")                action ADD_MARK(result, TM_READONLY);
-        if (mode == "w" || mode == "a") action ADD_MARK(result, TM_WRITEONLY);
+        if (mode == "r")                action ADD_MARK(result, TM_FILE_READONLY);
+        if (mode == "w" || mode == "a") action ADD_MARK(result, TM_FILE_WRITEONLY);
 
-        if (action VALUE_CONTAINS(path, "../")) // #note: shorthand for regex match
-            action SINK_ALARM(...); // potential path escape?
+        if (action VALUE_CONTAINS(path, "../"))
+            action SINK_ALARM(CWE_23);
 
         action COPY_MARKS(path, result);
 
-        // #question: where to put state assignment on the result
+        result = new ohos_file_fs_Stream(state = Open);
     }
 
 }

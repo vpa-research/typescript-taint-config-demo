@@ -28,3 +28,6 @@ import js.common;
 
 // global aliases, type overrides, taint marks and groups
 
+val TM_FILE_READONLY: taint_mark  = action NEW_TAINT_MARK();
+val TM_FILE_WRITEONLY: taint_mark = action NEW_TAINT_MARK();
+

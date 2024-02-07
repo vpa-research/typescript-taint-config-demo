@@ -1,2 +1,280 @@
 [
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "AnyNameMatcher (?)"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantEq",
+            "position": {
+                "_": "Argument",
+                "number": 0
+            },
+            "constant": "r"
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM_FILE_READONLY"
+                }
+            }
+        ]
+    },
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "AnyNameMatcher (?)"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "Or",
+            "args": [
+                {
+                    "_": "ConstantEq",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "constant": "w"
+                },
+                {
+                    "_": "ConstantEq",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "constant": "a"
+                }
+            ]
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM_FILE_WRITEONLY"
+                }
+            }
+        ]
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "Relative Path Traversal",
+        "cwe": [
+            23
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "AnyNameMatcher (?)"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantMatches",
+            "position": {
+                "_": "Argument",
+                "number": 0
+            },
+            "pattern": ".*?\\.\\./.*"
+        }
+    },
+    {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "AnyNameMatcher (?)"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }
+        ]
+    }
 ]
