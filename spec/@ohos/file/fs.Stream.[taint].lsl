@@ -37,52 +37,52 @@ automaton fileIo_Stream
 
     fun *.`<end-of-the-world>` ()  // #question: hidden?
     {
-        if (action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED))  // finish state
-            action SINK_ALARM(ERR_ohos_file_fs_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))  // finish state
+            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
     }
 
 
-    fun *.closeSync(@target self: ohos_file_fs_Stream): void
+    fun *.closeSync(@target self: fileIo_Stream): void
     {
         // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_ohos_file_fs_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
+            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         {
             // nothing?
         }
 
         // <- after everything: (hidden)
-        action REMOVE_MARK(self, TM_OHOS_FILE_FS_STREAM_S_OPEN);
-        action ADD_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED);
+        action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
+        action ADD_MARK(self, TM_FILEIO_STREAM_S_CLOSED);
     }
 
 
-    fun *.flushSync(@target self: ohos_file_fs_Stream): void
+    fun *.flushSync(@target self: fileIo_Stream): void
     {
         // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED) || action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_ohos_file_fs_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED) || action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
+            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         {
             // nothing?
         }
 
         // <- after everything: (hidden)
-        action REMOVE_MARK(self, TM_OHOS_FILE_FS_STREAM_S_OPEN);
-        action ADD_MARK(self, TM_OHOS_FILE_FS_STREAM_S_OPEN);
+        action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
+        action ADD_MARK(self, TM_FILEIO_STREAM_S_OPEN);
         // #note: same state - can do nothing
     }
 
 
-    fun *.readSync(@target self: ohos_file_fs_Stream,
+    fun *.readSync(@target self: fileIo_Stream,
                        buffer: ArrayBuffer,
                        @nullable options: ReadOptions  // #problem: nullability
                    ): number
     {
         // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_ohos_file_fs_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
+            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         {
             if (action HAS_MARK(self, TM_WRITEONLY))
@@ -96,14 +96,14 @@ automaton fileIo_Stream
     }
 
 
-    fun *.writeSync(@target self: ohos_file_fs_Stream,
+    fun *.writeSync(@target self: fileIo_Stream,
                         buffer: ArrayBuffer | string,    // #problem: no sum-types
                         @nullable options: WriteOptions
                     ): number
     {
         // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_OHOS_FILE_FS_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_ohos_file_fs_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
+            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         // user code here
         {

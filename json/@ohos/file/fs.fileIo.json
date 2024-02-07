@@ -325,6 +325,15 @@
                 "to": {
                     "_": "Result"
                 }
+            },
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "FILEIO_STREAM_S_OPEN"
+                }
             }
         ]
     }
