@@ -10,15 +10,15 @@ library std
 
 import @ohos/file/fs;
 
-import vulnerabilities/js;
+import @ohos/file/fs._taint_;  // taint-related marks and CWE groups
 
 
 // automata
 
-automaton ohos_file_fs
+automaton fileIo
 (
 )
-: ohos_file_fs
+: fileIo
 {
     initstate Initialized;
     shift Initialized -> self []; // unused

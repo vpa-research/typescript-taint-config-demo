@@ -1,5 +1,56 @@
 [
     {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo"
+                },
+                "classNameMatcher": {
+                    "_": "AnyNameMatcher (?)"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "accessSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "boolean"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }
+        ]
+    },
+    {
         "_": "MethodSource",
         "methodInfo": {
             "cls": {

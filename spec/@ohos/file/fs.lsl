@@ -12,22 +12,19 @@ import js.common;
 
 // primary semantic types
 
-@package type ohos_file_fs
-    is `@ohos.file.fs`  // #question: what?
+@package type fileIo
+    is `fileIo@ohos.file.fs`  // #question: what?
     for js_package
 {
 }
 
 
-@interface type ohos_file_fs_Stream
-    is `@ohos.file.fs.Stream`  // #question: what?
+@interface type fileIo_Stream
+    is `fileIo.Stream@ohos.file.fs`  // #question: what?
     for js_interface
 {
 }
 
 
-// global aliases, type overrides, taint marks and groups
-
-val TM_FILE_READONLY: taint_mark  = action NEW_TAINT_MARK();
-val TM_FILE_WRITEONLY: taint_mark = action NEW_TAINT_MARK();
+// global aliases and type overrides
 

@@ -10,14 +10,16 @@ library std
 
 import @ohos/file/fs;
 
+import @ohos/file/fs._taint_;  // taint-related marks and CWE groups
+
 
 // automata
 
-automaton ohos_file_fs_Stream
+automaton fileIo_Stream
 (
     // #note: automata variables are not allowed (simple state only)
 )
-: ohos_file_fs_Stream
+: fileIo_Stream
 {
     initstate Open;
     finishstate Closed;
