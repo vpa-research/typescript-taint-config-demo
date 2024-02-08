@@ -5,10 +5,11 @@
             "cls": {
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
-                    "_": "AnyNameMatcher (?)"
+                    "_": "NameIsEqualTo",
+                    "name": ""
                 }
             },
             "functionName": {
@@ -56,10 +57,11 @@
             "cls": {
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
-                    "_": "AnyNameMatcher (?)"
+                    "_": "NameIsEqualTo",
+                    "name": ""
                 }
             },
             "functionName": {
@@ -86,7 +88,7 @@
                 "_": "ClassMatcher",
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
                     "_": "NameIsEqualTo",
@@ -105,7 +107,10 @@
                 "_": "Argument",
                 "number": 0
             },
-            "constant": "r"
+            "constant": {
+                "_": "StringValue",
+                "value": "r"
+            }
         },
         "actionsAfter": [
             {
@@ -125,10 +130,11 @@
             "cls": {
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
-                    "_": "AnyNameMatcher (?)"
+                    "_": "NameIsEqualTo",
+                    "name": ""
                 }
             },
             "functionName": {
@@ -155,7 +161,7 @@
                 "_": "ClassMatcher",
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
                     "_": "NameIsEqualTo",
@@ -177,7 +183,10 @@
                         "_": "Argument",
                         "number": 0
                     },
-                    "constant": "w"
+                    "constant": {
+                        "_": "StringValue",
+                        "value": "w"
+                    }
                 },
                 {
                     "_": "ConstantEq",
@@ -185,7 +194,10 @@
                         "_": "Argument",
                         "number": 0
                     },
-                    "constant": "a"
+                    "constant": {
+                        "_": "StringValue",
+                        "value": "a"
+                    }
                 }
             ]
         },
@@ -211,10 +223,11 @@
             "cls": {
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
-                    "_": "AnyNameMatcher (?)"
+                    "_": "NameIsEqualTo",
+                    "name": ""
                 }
             },
             "functionName": {
@@ -241,7 +254,7 @@
                 "_": "ClassMatcher",
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
                     "_": "NameIsEqualTo",
@@ -269,10 +282,11 @@
             "cls": {
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
-                    "_": "AnyNameMatcher (?)"
+                    "_": "NameIsEqualTo",
+                    "name": ""
                 }
             },
             "functionName": {
@@ -299,7 +313,7 @@
                 "_": "ClassMatcher",
                 "packageMatcher": {
                     "_": "NameIsEqualTo",
-                    "name": "fileIo"
+                    "name": "fileIo:@ohos.file.fs"
                 },
                 "classNameMatcher": {
                     "_": "NameIsEqualTo",

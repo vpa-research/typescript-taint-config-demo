@@ -1,0 +1,633 @@
+[
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::closeSync(fileIo_Stream)",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "closeSync"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "FILEIO_STREAM_S_CLOSED"
+            }
+        }
+    },
+    {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "closeSync"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "RemoveMark",
+                "position": {
+                    "_": "This"
+                },
+                "mark": "FILEIO_STREAM_S_OPEN"
+            },
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "This"
+                },
+                "mark": "FILEIO_STREAM_S_CLOSED"
+            }
+        ]
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::flushSync(fileIo_Stream)",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "flushSync"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "FILEIO_STREAM_S_CLOSED"
+            }
+        }
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::readSync(fileIo_Stream, ArrayBuffer, ReadOptions)",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "readSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ReadOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "FILEIO_STREAM_S_CLOSED"
+            }
+        }
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "Reading from a source in write-only mode",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "readSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ReadOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM_FILE_WRITEONLY"
+            }
+        }
+    },
+    {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "readSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ReadOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }
+        ]
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::writeSync(fileIo_Stream, sum_type<ArrayBuffer, string>, WriteOptions)",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "writeSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer (?) string"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "WriteOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "FILEIO_STREAM_S_CLOSED"
+            }
+        }
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "Writing to a destination in read-only mode",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "writeSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer (?) string"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "WriteOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM_FILE_READONLY"
+            }
+        }
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "System Information Leak",
+        "cwe": [
+            497
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "writeSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer (?) string"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "WriteOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "Argument",
+                "position": 0
+            },
+            "mark": {
+                "name": "TM_SYSTEM_INFO"
+            }
+        }
+    },
+    {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "pattern": "writeSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer (?) string"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.file.fs"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "WriteOptions"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "number"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }
+        ]
+    }
+]

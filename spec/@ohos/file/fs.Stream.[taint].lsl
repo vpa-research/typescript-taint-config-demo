@@ -35,11 +35,13 @@ automaton fileIo_Stream
     ];
 
 
+    /*
     fun *.`<end-of-the-world>` ()  // #question: hidden?
     {
         if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))  // finish state
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
     }
+    */
 
 
     fun *.closeSync(@target self: fileIo_Stream): void
@@ -85,8 +87,8 @@ automaton fileIo_Stream
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         {
-            if (action HAS_MARK(self, TM_WRITEONLY))
-                action SINK_ALARM(...);
+            if (action HAS_MARK(self, TM_FILE_WRITEONLY))
+                action SINK_ALARM(ERR_READ_FROM_WRITEONLY);
 
             action COPY_MARKS(buffer, result);
         }
@@ -97,7 +99,7 @@ automaton fileIo_Stream
 
 
     fun *.writeSync(@target self: fileIo_Stream,
-                        buffer: ArrayBuffer | string,    // #problem: no sum-types
+                        buffer: sum_type<ArrayBuffer, string>,    // #problem: no sum-types
                         @nullable options: WriteOptions
                     ): number
     {
@@ -107,11 +109,11 @@ automaton fileIo_Stream
 
         // user code here
         {
-            if (action HAS_MARK(self, TM_READONLY))
-                action SINK_ALARM(...);
+            if (action HAS_MARK(self, TM_FILE_READONLY))
+                action SINK_ALARM(ERR_WRITE_TO_READONLY);
 
             if (action HAS_MARK(buffer, TM_SYSTEM_INFO))
-                action SINK_ALARM(...);
+                action SINK_ALARM(CWE_497);
 
             action COPY_MARKS(buffer, result);
         }
