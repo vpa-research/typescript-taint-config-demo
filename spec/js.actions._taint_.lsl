@@ -9,6 +9,30 @@ library std
 
 // -none-
 
+/// primary actions
+
+define action NEW_TAINT_MARK (
+    ): taint_mark;
+
+
+define action NEW_TAINT_GROUP (
+        note: string,           // a literal!
+        cweList: array<int32>   // a literal!
+    ): taint_group;
+
+
+define action SINK_ALARM (
+        err: taint_group   // a variable!
+    ): void;
+
+
+/// taint tag/mark validation actions
+
+define action HAS_MARK (
+        v: any             // a variable!
+        mark: taint_mark   // a variable!
+    ): bool;
+
 
 /// taint mark/tag management actions
 
@@ -44,6 +68,14 @@ define action REMOVE_MARKS_ALL (
 
 /// misc actions
 
+define action VALUE_CONTAINS (
+        v: any,             // a variable!
+        substring: string   // a literal!
+    ): bool;
 
-define action
+
+define action VALUE_MATCHES (
+        v: any,             // a variable!
+        regex: string       // a literal!
+    ): bool;
 

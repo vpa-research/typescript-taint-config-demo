@@ -26,7 +26,7 @@ automaton fileIo
 
     static fun *.accessSync (path: string): boolean
     {
-        action COPY_MARKS(path, result);
+        action COPY_MARKS_ALL(path, result);
     }
 
 
@@ -38,7 +38,7 @@ automaton fileIo
         if (action VALUE_CONTAINS(path, "../"))
             action SINK_ALARM(CWE_23);
 
-        action COPY_MARKS(path, result);
+        action COPY_MARKS_ALL(path, result);
 
         result = new fileIo_Stream(state = Open);
     }

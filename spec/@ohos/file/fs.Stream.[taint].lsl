@@ -36,9 +36,9 @@ automaton fileIo_Stream
 
 
     /*
-    fun *.`<end-of-the-world>` ()  // #question: hidden?
+    fun *.`<end-of-the-world>` ()  // #question: hidden/auto-generated?
     {
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))  // finish state
+        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))  // finish state(s)
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
     }
     */
@@ -50,6 +50,7 @@ automaton fileIo_Stream
         if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
+        // user code here
         {
             // nothing?
         }
@@ -66,6 +67,7 @@ automaton fileIo_Stream
         if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED) || action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
+        // user code here
         {
             // nothing?
         }
@@ -86,11 +88,12 @@ automaton fileIo_Stream
         if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
+        // user code here
         {
             if (action HAS_MARK(self, TM_FILE_WRITEONLY))
                 action SINK_ALARM(ERR_READ_FROM_WRITEONLY);
 
-            action COPY_MARKS(buffer, result);
+            action COPY_MARKS_ALL(buffer, result);
         }
 
         // <- after everything: (hidden)
@@ -115,7 +118,7 @@ automaton fileIo_Stream
             if (action HAS_MARK(buffer, TM_SYSTEM_INFO))
                 action SINK_ALARM(CWE_497);
 
-            action COPY_MARKS(buffer, result);
+            action COPY_MARKS_ALL(buffer, result);
         }
 
         // <- after everything: (hidden)
