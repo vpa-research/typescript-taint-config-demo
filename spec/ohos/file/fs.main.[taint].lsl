@@ -8,9 +8,9 @@ library std
 
 // imports
 
-import @ohos/file/fs;
+import ohos/file/fs;
 
-import @ohos/file/fs._taint_;  // taint-related marks and CWE groups
+import ohos/file/fs._taint_;  // taint-related marks and CWE groups
 
 
 // automata
@@ -21,7 +21,10 @@ automaton fileIo
 : fileIo
 {
     initstate Initialized;
-    shift Initialized -> self []; // unused
+
+    shift Initialized -> self by [
+        accessSync,
+    ];
 
 
     static fun *.accessSync (path: string): boolean
@@ -40,7 +43,7 @@ automaton fileIo
 
         action COPY_MARKS_ALL(path, result);
 
-        result = new fileIo_Stream(state = Open);
+        //result = new fileIo_Stream(state = Open);
     }
 
 }

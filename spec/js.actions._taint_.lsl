@@ -29,7 +29,7 @@ define action SINK_ALARM (
 /// taint tag/mark validation actions
 
 define action HAS_MARK (
-        v: any             // a variable!
+        v: any,            // a variable!
         mark: taint_mark   // a variable!
     ): bool;
 
@@ -62,7 +62,7 @@ define action REMOVE_MARK (
 
 
 define action REMOVE_MARKS_ALL (
-        v: any,             // a variable!
+        v: any              // a variable!
     ): void;
 
 

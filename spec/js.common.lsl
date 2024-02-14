@@ -19,9 +19,17 @@ type js_package
 {
 }
 
+
+type object
+    is `?`
+    for object
+{
+}
+
+
 @interface type js_interface
     is `?`
-    for js_interface
+    for object
 {
 }
 
@@ -31,4 +39,8 @@ type js_package
     for js_interface
 {
 }
+
+
+typealias number = int64; // #problem: not actually the case
+typealias boolean = bool; // #problem: not actually the case
 

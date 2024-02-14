@@ -17,7 +17,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "closeSync"
+                "name": "closeSync"
             },
             "parametersMatchers": [
             ],
@@ -56,7 +56,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "closeSync"
+                "name": "closeSync"
             },
             "parametersMatchers": [
             ],
@@ -108,7 +108,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "flushSync"
+                "name": "flushSync"
             },
             "parametersMatchers": [
             ],
@@ -150,7 +150,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "readSync"
+                "name": "readSync"
             },
             "parametersMatchers": [
                 {
@@ -220,7 +220,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "readSync"
+                "name": "readSync"
             },
             "parametersMatchers": [
                 {
@@ -287,7 +287,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "readSync"
+                "name": "readSync"
             },
             "parametersMatchers": [
                 {
@@ -363,7 +363,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "writeSync"
+                "name": "writeSync"
             },
             "parametersMatchers": [
                 {
@@ -433,7 +433,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "writeSync"
+                "name": "writeSync"
             },
             "parametersMatchers": [
                 {
@@ -504,7 +504,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "writeSync"
+                "name": "writeSync"
             },
             "parametersMatchers": [
                 {
@@ -572,7 +572,7 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
-                "pattern": "writeSync"
+                "name": "writeSync"
             },
             "parametersMatchers": [
                 {
