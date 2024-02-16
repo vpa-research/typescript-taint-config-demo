@@ -1,4 +1,4 @@
-/////////////////#! pragma: target=taint-config-json
+///#! pragma: target=taint-config-json
 libsl "1.1.0";
 
 library std
@@ -24,13 +24,13 @@ automaton fileIo_Stream
     initstate Open;
     finishstate Closed;
 
-    shift Open -> self [
+    shift Open -> self by [
         flushSync,
         readSync,
         writeSync,
     ];
 
-    shift Open -> Closed [
+    shift Open -> Closed by [
         closeSync,
     ];
 
@@ -51,9 +51,9 @@ automaton fileIo_Stream
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         // user code here
-        {
+        //{
             // nothing?
-        }
+        //}
 
         // <- after everything: (hidden)
         action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
@@ -68,9 +68,9 @@ automaton fileIo_Stream
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         // user code here
-        {
+        //{
             // nothing?
-        }
+        //}
 
         // <- after everything: (hidden)
         action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
@@ -89,12 +89,12 @@ automaton fileIo_Stream
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         // user code here
-        {
+        //{
             if (action HAS_MARK(self, TM_FILE_WRITEONLY))
                 action SINK_ALARM(ERR_READ_FROM_WRITEONLY);
 
             action COPY_MARKS_ALL(buffer, result);
-        }
+        //}
 
         // <- after everything: (hidden)
         // #note: same state - no transition
@@ -111,7 +111,7 @@ automaton fileIo_Stream
             action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
 
         // user code here
-        {
+        //{
             if (action HAS_MARK(self, TM_FILE_READONLY))
                 action SINK_ALARM(ERR_WRITE_TO_READONLY);
 
@@ -119,7 +119,7 @@ automaton fileIo_Stream
                 action SINK_ALARM(CWE_497);
 
             action COPY_MARKS_ALL(buffer, result);
-        }
+        //}
 
         // <- after everything: (hidden)
         // #note: same state - no transition

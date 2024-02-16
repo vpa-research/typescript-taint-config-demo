@@ -33,5 +33,12 @@ import js.common;
 }
 
 
+@interface type WriteOptions
+    is `WriteOptions:<default>:@ohos.file.fs`  // #question: what?
+    for js_interface
+{
+}
+
+
 // global aliases and type overrides
 

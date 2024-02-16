@@ -20,6 +20,14 @@ type js_package
 }
 
 
+// #problem: a workaround
+type sum_type
+    is `<internal>`
+    for sum_type
+{
+}
+
+
 type object
     is `?`
     for object
