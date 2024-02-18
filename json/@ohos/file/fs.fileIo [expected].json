@@ -105,7 +105,7 @@
             "_": "ConstantEq",
             "position": {
                 "_": "Argument",
-                "number": 0
+                "number": 1
             },
             "constant": {
                 "_": "StringValue",
@@ -181,7 +181,7 @@
                     "_": "ConstantEq",
                     "position": {
                         "_": "Argument",
-                        "number": 0
+                        "number": 1
                     },
                     "constant": {
                         "_": "StringValue",
@@ -192,7 +192,7 @@
                     "_": "ConstantEq",
                     "position": {
                         "_": "Argument",
-                        "number": 0
+                        "number": 1
                     },
                     "constant": {
                         "_": "StringValue",
