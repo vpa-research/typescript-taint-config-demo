@@ -1,5 +1,57 @@
 [
     {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "accessSync"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "boolean"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }]
+    }
+    ,
+    {
         "_": "MethodSource",
         "methodInfo": {
             "cls": {
@@ -18,12 +70,19 @@
             },
             "parametersMatchers": [
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
+                ,
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
             ],
             "returnTypeMatcher": {
@@ -50,7 +109,7 @@
                 "number": 1
             },
             "constant": {
-                "_": "StringValue"
+                "_": "StringValue",
                 "value": "r"
             }
         },
@@ -85,12 +144,19 @@
             },
             "parametersMatchers": [
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
+                ,
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
             ],
             "returnTypeMatcher": {
@@ -120,7 +186,7 @@
                         "number": 1
                     },
                     "constant": {
-                        "_": "StringValue"
+                        "_": "StringValue",
                         "value": "w"
                     }
                 },
@@ -131,7 +197,7 @@
                         "number": 1
                     },
                     "constant": {
-                        "_": "StringValue"
+                        "_": "StringValue",
                         "value": "a"
                     }
                 }
@@ -153,7 +219,7 @@
         "_": "MethodSink",
         "ruleNote": "<todo>",
         "cwe": [
-                    ],
+        ],
         "methodInfo": {
             "cls": {
                 "packageMatcher": {
@@ -171,12 +237,19 @@
             },
             "parametersMatchers": [
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
+                ,
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
             ],
             "returnTypeMatcher": {
@@ -226,12 +299,19 @@
             },
             "parametersMatchers": [
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
+                ,
                 {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
                 }
             ],
             "returnTypeMatcher": {
@@ -272,55 +352,6 @@
                 },
                 "mark": {
                     "name": "TM-fileIo_Stream-#-Open"
-                }
-            }]
-    }
-    ,
-    {
-        "_": "PassThrough",
-        "methodInfo": {
-            "cls": {
-                "packageMatcher": {
-                    "_": "NameIsEqualTo",
-                    "name": "fileIo:@ohos.file.fs"
-                },
-                "classNameMatcher": {
-                    "_": "NameIsEqualTo",
-                    "name": ""
-                }
-            },
-            "functionName": {
-                "_": "NameIsEqualTo",
-                "name": "accessSync"
-            },
-            "parametersMatchers": [
-                {
-                    "_": "PrimitiveNameMatches",
-                    "name": "string"
-                }
-            ],
-            "returnTypeMatcher": {
-                "_": "PrimitiveNameMatches",
-                "name": "boolean"
-            },
-            "applyToOverrides": false,
-            "functionLabel": null,
-            "modifier": -1,
-            "exclude": [
-            ]
-        },
-        "condition": {
-            "_": "ConstantTrue"
-        },
-        "actionsAfter": [
-            {
-                "_": "CopyAllMarks",
-                "from": {
-                    "_": "Argument",
-                    "number": 0
-                },
-                "to": {
-                    "_": "Result"
                 }
             }]
     }
