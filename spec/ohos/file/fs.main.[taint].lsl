@@ -43,7 +43,7 @@ automaton fileIo
 
         action COPY_MARKS_ALL(path, result);
 
-        //result = new fileIo_Stream(state = Open);
+        result = new fileIo_Stream(state = Open);
     }
 
 }

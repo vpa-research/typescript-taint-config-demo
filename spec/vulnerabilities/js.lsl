@@ -17,3 +17,5 @@ val CWE_497: taint_group = action NEW_TAINT_GROUP("System Information Leak", [49
 
 val ERR_READ_FROM_WRITEONLY: taint_group = action NEW_TAINT_GROUP("Reading from a source in write-only mode", []);
 val ERR_WRITE_TO_READONLY: taint_group   = action NEW_TAINT_GROUP("Writing to a destination in read-only mode", []);
+
+val TM_SYSTEM_INFO: taint_mark = action NEW_TAINT_MARK();

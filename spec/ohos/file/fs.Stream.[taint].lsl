@@ -1,4 +1,4 @@
-///#! pragma: target=taint-config-json
+//#! pragma: target=taint-config-json
 libsl "1.1.0";
 
 library std
@@ -46,36 +46,13 @@ automaton fileIo_Stream
 
     fun *.closeSync(@target self: fileIo_Stream): void
     {
-        // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
-
-        // user code here
-        //{
-            // nothing?
-        //}
-
-        // <- after everything: (hidden)
-        action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
-        action ADD_MARK(self, TM_FILEIO_STREAM_S_CLOSED);
+        // nothing?
     }
 
 
     fun *.flushSync(@target self: fileIo_Stream): void
     {
-        // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED) || action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
-
-        // user code here
-        //{
-            // nothing?
-        //}
-
-        // <- after everything: (hidden)
-        action REMOVE_MARK(self, TM_FILEIO_STREAM_S_OPEN);
-        action ADD_MARK(self, TM_FILEIO_STREAM_S_OPEN);
-        // #note: same state - can do nothing
+        // nothing?
     }
 
 
@@ -84,20 +61,10 @@ automaton fileIo_Stream
                        @nullable options: ReadOptions  // #problem: nullability
                    ): number
     {
-        // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILE_WRITEONLY))
+            action SINK_ALARM(ERR_READ_FROM_WRITEONLY);
 
-        // user code here
-        //{
-            if (action HAS_MARK(self, TM_FILE_WRITEONLY))
-                action SINK_ALARM(ERR_READ_FROM_WRITEONLY);
-
-            action COPY_MARKS_ALL(buffer, result);
-        //}
-
-        // <- after everything: (hidden)
-        // #note: same state - no transition
+        action COPY_MARKS_ALL(buffer, result);
     }
 
 
@@ -106,23 +73,13 @@ automaton fileIo_Stream
                         @nullable options: WriteOptions
                     ): number
     {
-        // <- before everything: (hidden)
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))
-            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
+        if (action HAS_MARK(self, TM_FILE_READONLY))
+            action SINK_ALARM(ERR_WRITE_TO_READONLY);
 
-        // user code here
-        //{
-            if (action HAS_MARK(self, TM_FILE_READONLY))
-                action SINK_ALARM(ERR_WRITE_TO_READONLY);
+        if (action HAS_MARK(buffer, TM_SYSTEM_INFO))
+            action SINK_ALARM(CWE_497);
 
-            if (action HAS_MARK(buffer, TM_SYSTEM_INFO))
-                action SINK_ALARM(CWE_497);
-
-            action COPY_MARKS_ALL(buffer, result);
-        //}
-
-        // <- after everything: (hidden)
-        // #note: same state - no transition
+        action COPY_MARKS_ALL(buffer, result);
     }
 
 }

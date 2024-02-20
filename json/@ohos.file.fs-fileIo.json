@@ -1,0 +1,327 @@
+[
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantEq",
+            "position": {
+                "_": "Argument",
+                "number": 1
+            },
+            "constant": {
+                "_": "StringValue"
+                "value": "r"
+            }
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM_FILE_READONLY"
+                }
+            }]
+    }
+    ,
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "Or",
+            "args": [
+                {
+                    "_": "ConstantEq",
+                    "position": {
+                        "_": "Argument",
+                        "number": 1
+                    },
+                    "constant": {
+                        "_": "StringValue"
+                        "value": "w"
+                    }
+                },
+                {
+                    "_": "ConstantEq",
+                    "position": {
+                        "_": "Argument",
+                        "number": 1
+                    },
+                    "constant": {
+                        "_": "StringValue"
+                        "value": "a"
+                    }
+                }
+            ]
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM_FILE_WRITEONLY"
+                }
+            }]
+    }
+    ,
+    {
+        "_": "MethodSink",
+        "ruleNote": "<todo>",
+        "cwe": [
+                    ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            {
+                "_": "ConstantMatches",
+                "position": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "pattern": ".*?\\Q../\\E.*"
+            }}
+    }
+    ,
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "createStreamSync"
+            },
+            "parametersMatchers": [
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            },
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM-fileIo_Stream-#-Open"
+                }
+            }]
+    }
+    ,
+    {
+        "_": "PassThrough",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "accessSync"
+            },
+            "parametersMatchers": [
+                {
+                    "_": "PrimitiveNameMatches",
+                    "name": "string"
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "boolean"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "CopyAllMarks",
+                "from": {
+                    "_": "Argument",
+                    "number": 0
+                },
+                "to": {
+                    "_": "Result"
+                }
+            }]
+    }
+]
