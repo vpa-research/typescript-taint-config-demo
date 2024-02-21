@@ -1,7 +1,7 @@
 [
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::closeSync(fileIo_Stream)",
         "cwe": [
         ],
         "methodInfo": {
@@ -133,7 +133,7 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::flushSync(fileIo_Stream)",
         "cwe": [
         ],
         "methodInfo": {
@@ -191,7 +191,7 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::readSync(fileIo_Stream, ArrayBuffer, ReadOptions)",
         "cwe": [
         ],
         "methodInfo": {
@@ -279,7 +279,7 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "Reading from a source in write-only mode",
         "cwe": [
         ],
         "methodInfo": {
@@ -456,7 +456,7 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "<internal:invalid-state>@fileIo_Stream::writeSync(fileIo_Stream, sum_type<ArrayBuffer, string>, WriteOptions)",
         "cwe": [
         ],
         "methodInfo": {
@@ -536,7 +536,7 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "Writing to a destination in read-only mode",
         "cwe": [
         ],
         "methodInfo": {
@@ -616,8 +616,9 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "System Information Leak",
         "cwe": [
+            497
         ],
         "methodInfo": {
             "cls": {

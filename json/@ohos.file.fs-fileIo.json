@@ -217,8 +217,9 @@
     ,
     {
         "_": "MethodSink",
-        "ruleNote": "<todo>",
+        "ruleNote": "Relative Path Traversal",
         "cwe": [
+            23
         ],
         "methodInfo": {
             "cls": {
