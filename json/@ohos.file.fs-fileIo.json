@@ -48,7 +48,8 @@
                 "to": {
                     "_": "Result"
                 }
-            }]
+            }
+        ]
     }
     ,
     {
@@ -122,7 +123,8 @@
                 "mark": {
                     "name": "TM_FILE_READONLY"
                 }
-            }]
+            }
+        ]
     }
     ,
     {
@@ -212,7 +214,8 @@
                 "mark": {
                     "name": "TM_FILE_WRITEONLY"
                 }
-            }]
+            }
+        ]
     }
     ,
     {
@@ -271,14 +274,13 @@
             ]
         },
         "condition": {
-            {
-                "_": "ConstantMatches",
-                "position": {
-                    "_": "Argument",
-                    "number": 0
-                },
-                "pattern": ".*?\\.\\./.*"
-            }}
+            "_": "ConstantMatches",
+            "position": {
+                "_": "Argument",
+                "number": 0
+            },
+            "pattern": ".*?\\.\\./.*"
+        }
     }
     ,
     {
@@ -354,6 +356,7 @@
                 "mark": {
                     "name": "TM-fileIo_Stream-#-Open"
                 }
-            }]
+            }
+        ]
     }
 ]

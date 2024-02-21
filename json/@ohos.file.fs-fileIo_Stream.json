@@ -46,15 +46,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM-fileIo_Stream-#-Closed"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Closed"
+            }
+        }
     }
     ,
     {
@@ -101,15 +100,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM-fileIo_Stream-#-Open"
-                }
-            }},
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Open"
+            }
+        },
         "actionsAfter": [
             {
                 "_": "RemoveMark",
@@ -128,7 +126,8 @@
                 "mark": {
                     "name": "TM-fileIo_Stream-#-Closed"
                 }
-            }]
+            }
+        ]
     }
     ,
     {
@@ -178,15 +177,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM-fileIo_Stream-#-Closed"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Closed"
+            }
+        }
     }
     ,
     {
@@ -266,15 +264,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM-fileIo_Stream-#-Closed"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Closed"
+            }
+        }
     }
     ,
     {
@@ -354,15 +351,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM_FILE_WRITEONLY"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM_FILE_WRITEONLY"
+            }
+        }
     }
     ,
     {
@@ -451,7 +447,8 @@
                 "to": {
                     "_": "Result"
                 }
-            }]
+            }
+        ]
     }
     ,
     {
@@ -523,15 +520,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM-fileIo_Stream-#-Closed"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Closed"
+            }
+        }
     }
     ,
     {
@@ -603,15 +599,14 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "This"
-                },
-                "mark": {
-                    "name": "TM_FILE_READONLY"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM_FILE_READONLY"
+            }
+        }
     }
     ,
     {
@@ -684,16 +679,15 @@
             ]
         },
         "condition": {
-            {
-                "_": "ContainsMark",
-                "position": {
-                    "_": "Argument",
-                    "number": 0
-                },
-                "mark": {
-                    "name": "TM_SYSTEM_INFO"
-                }
-            }}
+            "_": "ContainsMark",
+            "position": {
+                "_": "Argument",
+                "number": 0
+            },
+            "mark": {
+                "name": "TM_SYSTEM_INFO"
+            }
+        }
     }
     ,
     {
@@ -774,6 +768,7 @@
                 "to": {
                     "_": "Result"
                 }
-            }]
+            }
+        ]
     }
 ]
