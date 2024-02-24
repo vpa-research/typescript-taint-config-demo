@@ -54,8 +54,7 @@
                 "name": "TM-fileIo_Stream-#-Closed"
             }
         }
-    }
-    ,
+    },
     {
         "_": "PassThrough",
         "methodInfo": {
@@ -128,8 +127,7 @@
                 }
             }
         ]
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "<internal:invalid-state>@fileIo_Stream::flushSync(fileIo_Stream)",
@@ -185,8 +183,7 @@
                 "name": "TM-fileIo_Stream-#-Closed"
             }
         }
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "<internal:invalid-state>@fileIo_Stream::readSync(fileIo_Stream, ArrayBuffer, ReadOptions)",
@@ -221,8 +218,7 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
@@ -236,8 +232,7 @@
                             "name": "ArrayBuffer"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -272,8 +267,7 @@
                 "name": "TM-fileIo_Stream-#-Closed"
             }
         }
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "Reading from a source in write-only mode",
@@ -308,8 +302,7 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
@@ -323,8 +316,7 @@
                             "name": "ArrayBuffer"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -359,8 +351,7 @@
                 "name": "TM_FILE_WRITEONLY"
             }
         }
-    }
-    ,
+    },
     {
         "_": "PassThrough",
         "methodInfo": {
@@ -392,8 +383,7 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
@@ -407,8 +397,7 @@
                             "name": "ArrayBuffer"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -449,8 +438,7 @@
                 }
             }
         ]
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "<internal:invalid-state>@fileIo_Stream::writeSync(fileIo_Stream, sum_type<ArrayBuffer, string>, WriteOptions)",
@@ -485,15 +473,13 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -528,8 +514,7 @@
                 "name": "TM-fileIo_Stream-#-Closed"
             }
         }
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "Writing to a destination in read-only mode",
@@ -564,15 +549,13 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -607,8 +590,7 @@
                 "name": "TM_FILE_READONLY"
             }
         }
-    }
-    ,
+    },
     {
         "_": "MethodSink",
         "ruleNote": "System Information Leak",
@@ -644,15 +626,13 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
@@ -688,8 +668,7 @@
                 "name": "TM_SYSTEM_INFO"
             }
         }
-    }
-    ,
+    },
     {
         "_": "PassThrough",
         "methodInfo": {
@@ -721,15 +700,13 @@
                             "name": "Stream"
                         }
                     }
-                }
-                ,
+                },
                 {
                     "index": 1,
                     "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
-                }
-                ,
+                },
                 {
                     "index": 2,
                     "typeMatcher": {
