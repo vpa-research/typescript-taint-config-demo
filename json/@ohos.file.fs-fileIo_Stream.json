@@ -20,20 +20,6 @@
                 "name": "closeSync"
             },
             "parametersMatchers": [
-                {
-                    "index": 0,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                }
             ],
             "returnTypeMatcher": {
                 "_": "PrimitiveNameMatches",
@@ -73,20 +59,6 @@
                 "name": "closeSync"
             },
             "parametersMatchers": [
-                {
-                    "index": 0,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                }
             ],
             "returnTypeMatcher": {
                 "_": "PrimitiveNameMatches",
@@ -149,20 +121,6 @@
                 "name": "flushSync"
             },
             "parametersMatchers": [
-                {
-                    "index": 0,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                }
             ],
             "returnTypeMatcher": {
                 "_": "PrimitiveNameMatches",
@@ -211,20 +169,6 @@
                         "_": "ClassMatcher",
                         "packageMatcher": {
                             "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
                             "name": "<default>:"
                         },
                         "classNameMatcher": {
@@ -234,7 +178,7 @@
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -295,20 +239,6 @@
                         "_": "ClassMatcher",
                         "packageMatcher": {
                             "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
                             "name": "<default>:"
                         },
                         "classNameMatcher": {
@@ -318,7 +248,7 @@
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -376,20 +306,6 @@
                         "_": "ClassMatcher",
                         "packageMatcher": {
                             "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
                             "name": "<default>:"
                         },
                         "classNameMatcher": {
@@ -399,7 +315,7 @@
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -463,25 +379,11 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -539,25 +441,11 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -616,25 +504,11 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
@@ -690,25 +564,11 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "fileIo:@ohos.file.fs"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "Stream"
-                        }
-                    }
-                },
-                {
-                    "index": 1,
-                    "typeMatcher": {
                         "_": "AnyTypeMatches"
                     }
                 },
                 {
-                    "index": 2,
+                    "index": 1,
                     "typeMatcher": {
                         "_": "ClassMatcher",
                         "packageMatcher": {
