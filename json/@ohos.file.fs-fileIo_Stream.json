@@ -408,13 +408,52 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "This"
-            },
-            "mark": {
-                "name": "TM-fileIo_Stream-#-Closed"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "This"
+                    },
+                    "mark": {
+                        "name": "TM-fileIo_Stream-#-Closed"
+                    }
+                }
+            ]
         }
     },
     {
@@ -470,13 +509,52 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "This"
-            },
-            "mark": {
-                "name": "TM_FILE_READONLY"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "This"
+                    },
+                    "mark": {
+                        "name": "TM_FILE_READONLY"
+                    }
+                }
+            ]
         }
     },
     {
@@ -533,14 +611,53 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "Argument",
-                "number": 0
-            },
-            "mark": {
-                "name": "TM_SYSTEM_INFO"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "mark": {
+                        "name": "TM_SYSTEM_INFO"
+                    }
+                }
+            ]
         }
     },
     {
@@ -593,7 +710,38 @@
             ]
         },
         "condition": {
-            "_": "ConstantTrue"
+            "_": "Or",
+            "args": [
+                {
+                    "_": "IsType",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "type": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer"
+                        }
+                    }
+                },
+                {
+                    "_": "IsType",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "type": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ]
         },
         "actionsAfter": [
             {
