@@ -755,5 +755,50 @@
                 }
             }
         ]
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-terminal-state>@fileIo_Stream",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "<end-of-the-universe>"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "Not",
+            "condition": {
+                "_": "ContainsMark",
+                "position": {
+                    "_": "This"
+                },
+                "mark": {
+                    "name": "TM-fileIo_Stream-#-Closed"
+                }
+            }
+        }
     }
 ]

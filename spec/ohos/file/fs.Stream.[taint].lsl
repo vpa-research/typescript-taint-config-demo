@@ -36,10 +36,12 @@ automaton fileIo_Stream
 
 
     /*
-    fun *.`<end-of-the-world>` (@target self: fileIo_Stream)  // #question: hidden/auto-generated?
+    fun *.`<end-of-the-universe>` (@target self: fileIo_Stream)
     {
-        if (action HAS_MARK(self, TM_FILEIO_STREAM_S_CLOSED))  // finish state(s)
-            action SINK_ALARM(ERR_fileIo_Stream_InvalidState);
+        // This is an optional function/method that can be used to validate the finishing state and/or
+        // other marks at the end of life of this automaton/object.
+
+        // Terminal state validation is enabled by '--tcj:enable-eou' flag
     }
     */
 
