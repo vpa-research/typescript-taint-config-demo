@@ -41,7 +41,8 @@ automaton fileIo_Stream
         // This is an optional function/method that can be used to validate the finishing state and/or
         // other marks at the end of life of this automaton/object.
 
-        // Terminal state validation is enabled by '--tcj:enable-eou' flag
+        // Terminal state validation is enabled by default.
+        // Can be disabled via '--tcj:disable-eou' flag.
     }
     */
 

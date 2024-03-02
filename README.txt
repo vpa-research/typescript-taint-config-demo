@@ -3,5 +3,5 @@ Translator usage example:
 - additional arguments: --output-dir=..\json --target=taint-config-json
 
 Optional flags:
---tcj:enable-eou
 --tcj:eou-name=<end-of-the-universe>
+--tcj:disable-eou
