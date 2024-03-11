@@ -53,6 +53,7 @@ automaton fileIo_Stream
     }
 
 
+    @ConfigMethodInfo("applyToOverrides", true)  // #note: just a usage example
     fun *.flushSync(@target self: fileIo_Stream): void
     {
         // nothing?

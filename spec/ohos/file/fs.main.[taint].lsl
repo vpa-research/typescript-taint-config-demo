@@ -26,7 +26,6 @@ automaton fileIo
     ];
 
 
-    @ConfigMethodInfo("applyToOverrides", true)
     static fun *.accessSync (path: string): boolean
     {
         action COPY_MARKS_ALL(path, result);

@@ -29,7 +29,7 @@
                 "_": "PrimitiveNameMatches",
                 "name": "boolean"
             },
-            "applyToOverrides": true,
+            "applyToOverrides": false,
             "functionLabel": null,
             "modifier": -1,
             "exclude": [
