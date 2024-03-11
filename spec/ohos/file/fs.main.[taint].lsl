@@ -23,10 +23,10 @@ automaton fileIo
     initstate Initialized;
 
     shift Initialized -> self by [
-        accessSync,
     ];
 
 
+    @ConfigMethodInfo("applyToOverrides", true)
     static fun *.accessSync (path: string): boolean
     {
         action COPY_MARKS_ALL(path, result);

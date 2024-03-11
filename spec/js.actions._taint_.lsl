@@ -79,3 +79,10 @@ define action VALUE_MATCHES (
         regex: string       // a literal!
     ): bool;
 
+
+/// special
+
+annotation ConfigMethodInfo (
+    name: string,
+    value: any,
+);
