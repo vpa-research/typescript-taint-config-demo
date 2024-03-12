@@ -13,28 +13,28 @@ import js.common;
 // primary semantic types
 
 @package type fileIo
-    is `:fileIo:@ohos.file.fs`  // #question: what?
+    is `:fileIo:@ohos.file.fs`
     for js_package
 {
 }
 
 
 @interface type fileIo_Stream
-    is `Stream:fileIo:@ohos.file.fs`  // #question: what?
+    is `Stream:fileIo:@ohos.file.fs`
     for js_interface
 {
 }
 
 
 @interface type ReadOptions
-    is `ReadOptions:<default>:@ohos.file.fs`  // #question: what?
+    is `ReadOptions:<default>:@ohos.file.fs`
     for js_interface
 {
 }
 
 
 @interface type WriteOptions
-    is `WriteOptions:<default>:@ohos.file.fs`  // #question: what?
+    is `WriteOptions:<default>:@ohos.file.fs`
     for js_interface
 {
 }

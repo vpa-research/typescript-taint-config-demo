@@ -9,6 +9,7 @@ library std
 
 // -none-
 
+
 /// primary actions
 
 define action NEW_TAINT_MARK (
@@ -79,10 +80,3 @@ define action VALUE_MATCHES (
         regex: string       // a literal!
     ): bool;
 
-
-/// special
-
-annotation ConfigMethodInfo (
-    name: string,
-    value: any,
-);

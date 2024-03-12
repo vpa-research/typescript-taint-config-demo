@@ -7,7 +7,13 @@ library std
 
 // imports
 
+// -none-
 
 
-// #todo
+/// special use-cases
+
+annotation ConfigMethodInfo (
+    name: string,
+    value: any,
+);
 

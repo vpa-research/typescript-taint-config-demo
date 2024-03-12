@@ -73,7 +73,7 @@ automaton fileIo_Stream
 
 
     fun *.writeSync(@target self: fileIo_Stream,
-                        buffer: sum_type<ArrayBuffer, string>,    // #problem: no sum-types
+                        buffer: sum_type<ArrayBuffer, string>,
                         @nullable options: WriteOptions
                     ): number
     {

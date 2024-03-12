@@ -43,7 +43,7 @@ type object
 
 
 @interface type ArrayBuffer
-    is `ArrayBuffer:<default>:`  // #question: what?
+    is `ArrayBuffer:<default>:`
     for js_interface
 {
 }
