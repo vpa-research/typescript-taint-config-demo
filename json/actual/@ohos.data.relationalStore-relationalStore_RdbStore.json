@@ -1,0 +1,74 @@
+[
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "relationalStore:@ohos.data.relationalStore"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "RdbStore"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "query"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "relationalStore:@ohos.data.relationalStore"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "RdbPredicates"
+                        }
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "array"
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "<default>:es2018.promise.d.ts"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Promise"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM-relationalStore_ResultSet-#-Open"
+                }
+            }
+        ]
+    }
+]

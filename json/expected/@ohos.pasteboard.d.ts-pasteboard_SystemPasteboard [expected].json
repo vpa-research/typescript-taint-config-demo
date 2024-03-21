@@ -1,0 +1,67 @@
+[
+  {
+    "_": "MethodSink",
+    "ruleNote": "Privilege Defined With Unsafe Actions",
+    "cwe": [
+      267
+    ],
+    "methodInfo": {
+      "cls": {
+        "packageMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "pasteboard:@ohos.pasteboard.d.ts"
+        },
+        "classNameMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "SystemPasteboard"
+        }
+      },
+      "functionName": {
+        "_": "NameIsEqualTo",
+        "name": "setPasteData"
+      },
+      "parametersMatchers": [
+        {
+          "index": 0,
+          "typeMatcher": {
+            "_": "ClassMatcher",
+            "packageMatcher": {
+              "_": "NameIsEqualTo",
+              "name": "pasteboard:@ohos.pasteboard.d.ts"
+            },
+            "classNameMatcher": {
+              "_": "NameIsEqualTo",
+              "name": "PasteData"
+            }
+          }
+        }
+      ],
+      "returnTypeMatcher": {
+        "_": "ClassMatcher",
+        "packageMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "<default>:es2018.promise.d.ts"
+        },
+        "classNameMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "Promise"
+        }
+      },
+      "applyToOverrides": false,
+      "functionLabel": null,
+      "modifier": -1,
+      "exclude": [
+      ]
+    },
+    "condition": {
+      "_": "ContainsMark",
+      "position": {
+        "_": "Argument",
+        "number": 0
+      },
+      "mark": {
+        "name": "TM_STORE_SEVERITY_DATA_IN_PASTEBOARD"
+      }
+    }
+  }
+]
