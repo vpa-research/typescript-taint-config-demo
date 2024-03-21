@@ -1,0 +1,17 @@
+libsl "1.1.0";
+
+library std
+    version "?"
+    language "arkts"
+    url "-";
+
+// imports
+
+import js.common;
+import vulnerabilities/js;
+
+
+// global taint marks and groups
+
+val TM_NOT_CHECKED_RANGE_OF_NUMBER: taint_mark  = action NEW_TAINT_MARK();
+
