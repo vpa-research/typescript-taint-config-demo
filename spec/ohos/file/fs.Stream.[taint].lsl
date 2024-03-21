@@ -49,20 +49,20 @@ automaton fileIo_Stream
 
     fun *.closeSync(@target self: fileIo_Stream): void
     {
-        // nothing?
+        // nothing
     }
 
 
     @ConfigMethodInfo("applyToOverrides", true)  // #note: just a usage example
     fun *.flushSync(@target self: fileIo_Stream): void
     {
-        // nothing?
+        // nothing
     }
 
 
     fun *.readSync(@target self: fileIo_Stream,
                        buffer: ArrayBuffer,
-                       @nullable options: ReadOptions  // #problem: nullability
+                       @nullable options: ReadOptions  // #unsupported: nullability
                    ): number
     {
         if (action HAS_MARK(self, TM_FILE_WRITEONLY))
