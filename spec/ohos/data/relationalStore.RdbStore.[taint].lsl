@@ -1,4 +1,4 @@
-//#! pragma: target=taint-config-json
+///#! pragma: target=taint-config-json
 libsl "1.1.0";
 
 library std

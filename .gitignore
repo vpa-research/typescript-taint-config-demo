@@ -27,3 +27,9 @@ hs_err_pid*
 
 # auto-generated specification skeletons
 *.skeleton.lsl
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
