@@ -9,7 +9,6 @@ import org.junit.Test;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
@@ -20,15 +19,19 @@ import static junit.framework.TestCase.assertNotNull;
 
 public class TaintTest {
 
-    private static final String TRANSLATOR_ENV = "LIBSL_TRANSLATOR_EXECUTABLE";
-    private static final String TARGET_TAINT = "--target=taint-config-json";
-    private static final String VERBOSE_OPT = "--verbose";
-    private static final String ACTUAL_PATH = "/json/actual";
-    private static final String EXPECTED_PATH = "/json/expected";
+    private static final String ENV_TRANSLATOR_EXE = "LIBSL_TRANSLATOR_EXECUTABLE";
+    private static final String ARG_TARGET = "--target=taint-config-json";
+    private static final String ARG_VERBOSE = "--verbose";
+
+    private static final Path PATH_SPEC_ROOT = Path.of("spec");
+    private static final Path PATH_OUTPUT_ROOT = Path.of("json");
+    private static final Path PATH_ACTUAL = PATH_OUTPUT_ROOT.resolve("actual");
+    private static final Path PATH_EXPECTED = PATH_OUTPUT_ROOT.resolve("expected");
 
     @Before
     public void removeFolder() throws IOException {
-        Path pathToBeDeleted = Path.of(Path.of(".").toRealPath() + ACTUAL_PATH);
+        final var pathToBeDeleted = Path.of(".").toRealPath().resolve(PATH_ACTUAL);
+
         if (Files.exists(pathToBeDeleted)) {
             Files.walk(pathToBeDeleted)
                     .sorted(Comparator.reverseOrder())
@@ -39,34 +42,47 @@ public class TaintTest {
 
     @Test
     public void specsCheckerTest() throws IOException, ParseException, InterruptedException {
-        String translatorPath = System.getenv(TRANSLATOR_ENV);
+        final var translatorPath = System.getenv(ENV_TRANSLATOR_EXE);
         assertNotNull(translatorPath);
-        String projectPath = String.valueOf(Path.of(".").toRealPath());
-        String workDir = "--work-dir=" + projectPath + "/spec";
-        String outputDir = "--output-dir=" + projectPath + ACTUAL_PATH;
+
+        final var cwd = Path.of(".").toRealPath();
+        final var argWorkDir = "--work-dir=" + cwd.resolve(PATH_SPEC_ROOT);
+        final var argOutputDir = "--output-dir=" + cwd.resolve(PATH_ACTUAL);
+
         // Maybe add path param - $Shell ? If user wants to run with another shell
-        String[] args = new String[]{translatorPath, TARGET_TAINT, workDir, outputDir, VERBOSE_OPT};
-        Process proc = new ProcessBuilder(args).start();
+        final var proc = new ProcessBuilder(new String[]{
+                translatorPath,
+                ARG_TARGET,
+                argWorkDir,
+                argOutputDir,
+                ARG_VERBOSE
+        })
+                .inheritIO()
+                .start();
+
         assertEquals(0, proc.waitFor());
-        specsCompare(projectPath);
+        specsCompare(cwd);
     }
 
-    private void specsCompare(String projectPath) throws IOException, ParseException {
-        String expected_jsons_dir = projectPath + EXPECTED_PATH;
-        String actual_jsons_dir = projectPath + ACTUAL_PATH;
-        JSONParser parser = new JSONParser();
-        File actualDirectory = new File(actual_jsons_dir);
-        //List of all files and directories
-        for (String cur_json : Objects.requireNonNull(actualDirectory.list())) {
-            String path_of_expected_json = expected_jsons_dir + "/" + cur_json;
-            String path_of_actual_json = actual_jsons_dir + "/" + cur_json;
+    private void specsCompare(Path projectPath) throws IOException, ParseException {
+        final var expected_jsons_dir = projectPath.resolve(PATH_EXPECTED);
+        final var actual_jsons_dir = projectPath.resolve(PATH_ACTUAL);
 
-            try (InputStreamReader actual_reader = new FileReader(path_of_actual_json);
-                 InputStreamReader expected_reader = new FileReader(path_of_expected_json)) {
-                Object actual_file = parser.parse(actual_reader);
-                Object expected_file = parser.parse(expected_reader);
-                JSONArray actual_json = (JSONArray) actual_file;
-                JSONArray expected_json = (JSONArray) expected_file;
+        final var parser = new JSONParser();
+
+        //List of all files and directories (name only)
+        for (var cur_json : Objects.requireNonNull(actual_jsons_dir.toFile().list())) {
+            final var path_of_expected_json = expected_jsons_dir.resolve(cur_json);
+            final var path_of_actual_json = actual_jsons_dir.resolve(cur_json);
+
+            try (final var actual_reader = new FileReader(path_of_actual_json.toFile());
+                 final var expected_reader = new FileReader(path_of_expected_json.toFile())) {
+                final var actual_file = parser.parse(actual_reader);
+                final var expected_file = parser.parse(expected_reader);
+
+                final var actual_json = (JSONArray) actual_file;
+                final var expected_json = (JSONArray) expected_file;
+
                 assertEquals(expected_json.toJSONString(), actual_json.toJSONString());
             }
         }

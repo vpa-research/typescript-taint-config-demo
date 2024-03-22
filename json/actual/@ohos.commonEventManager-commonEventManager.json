@@ -1,0 +1,81 @@
+[
+    {
+        "_": "MethodSink",
+        "ruleNote": "Dynamic public events without permissions are prohibited from carrying severity level data",
+        "cwe": [
+            360
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "commonEventManager:@ohos.commonEventManager"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": ""
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "publish"
+            },
+            "parametersMatchers": [
+                {
+                    "index": 0,
+                    "typeMatcher": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                },
+                {
+                    "index": 1,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.base"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "CommonEventPublishData"
+                        }
+                    }
+                },
+                {
+                    "index": 2,
+                    "typeMatcher": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:@ohos.base"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "AsyncCallback"
+                        }
+                    }
+                }
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ContainsMark",
+            "position": {
+                "_": "Argument",
+                "number": 1
+            },
+            "mark": {
+                "name": "TM_NOT_CHECKED_PERMISSION"
+            }
+        }
+    }
+]

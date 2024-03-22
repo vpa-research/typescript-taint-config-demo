@@ -126,7 +126,7 @@
         "_": "PrimitiveNameMatches",
         "name": "void"
       },
-      "applyToOverrides": false,
+      "applyToOverrides": true,
       "functionLabel": null,
       "modifier": -1,
       "exclude": [

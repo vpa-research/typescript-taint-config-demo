@@ -37,7 +37,7 @@
                 "_": "This"
             },
             "mark": {
-                "name": "FILEIO_STREAM_S_CLOSED"
+                "name": "TM-fileIo_Stream-#-Closed"
             }
         }
     },
@@ -71,7 +71,13 @@
             ]
         },
         "condition": {
-            "_": "ConstantTrue"
+            "_": "ContainsMark",
+            "position": {
+                "_": "This"
+            },
+            "mark": {
+                "name": "TM-fileIo_Stream-#-Open"
+            }
         },
         "actionsAfter": [
             {
@@ -79,14 +85,18 @@
                 "position": {
                     "_": "This"
                 },
-                "mark": "FILEIO_STREAM_S_OPEN"
+                "mark": {
+                    "name": "TM-fileIo_Stream-#-Open"
+                }
             },
             {
                 "_": "AssignMark",
                 "position": {
                     "_": "This"
                 },
-                "mark": "FILEIO_STREAM_S_CLOSED"
+                "mark": {
+                    "name": "TM-fileIo_Stream-#-Closed"
+                }
             }
         ]
     },
@@ -116,7 +126,7 @@
                 "_": "PrimitiveNameMatches",
                 "name": "void"
             },
-            "applyToOverrides": false,
+            "applyToOverrides": true,
             "functionLabel": null,
             "modifier": -1,
             "exclude": [
@@ -128,7 +138,7 @@
                 "_": "This"
             },
             "mark": {
-                "name": "FILEIO_STREAM_S_CLOSED"
+                "name": "TM-fileIo_Stream-#-Closed"
             }
         }
     },
@@ -198,7 +208,7 @@
                 "_": "This"
             },
             "mark": {
-                "name": "FILEIO_STREAM_S_CLOSED"
+                "name": "TM-fileIo_Stream-#-Closed"
             }
         }
     },
@@ -369,15 +379,7 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "<default>:"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "ArrayBuffer (?) string"
-                        }
+                        "_": "AnyTypeMatches"
                     }
                 },
                 {
@@ -406,13 +408,52 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "This"
-            },
-            "mark": {
-                "name": "FILEIO_STREAM_S_CLOSED"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "This"
+                    },
+                    "mark": {
+                        "name": "TM-fileIo_Stream-#-Closed"
+                    }
+                }
+            ]
         }
     },
     {
@@ -439,15 +480,7 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "<default>:"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "ArrayBuffer (?) string"
-                        }
+                        "_": "AnyTypeMatches"
                     }
                 },
                 {
@@ -476,13 +509,52 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "This"
-            },
-            "mark": {
-                "name": "TM_FILE_READONLY"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "This"
+                    },
+                    "mark": {
+                        "name": "TM_FILE_READONLY"
+                    }
+                }
+            ]
         }
     },
     {
@@ -510,15 +582,7 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "<default>:"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "ArrayBuffer (?) string"
-                        }
+                        "_": "AnyTypeMatches"
                     }
                 },
                 {
@@ -547,14 +611,53 @@
             ]
         },
         "condition": {
-            "_": "ContainsMark",
-            "position": {
-                "_": "Argument",
-                "position": 0
-            },
-            "mark": {
-                "name": "TM_SYSTEM_INFO"
-            }
+            "_": "And",
+            "args": [
+                {
+                    "_": "Or",
+                    "args": [
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "ClassMatcher",
+                                "packageMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "<default>:"
+                                },
+                                "classNameMatcher": {
+                                    "_": "NameIsEqualTo",
+                                    "name": "ArrayBuffer"
+                                }
+                            }
+                        },
+                        {
+                            "_": "IsType",
+                            "position": {
+                                "_": "Argument",
+                                "number": 0
+                            },
+                            "type": {
+                                "_": "PrimitiveNameMatches",
+                                "name": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_": "ContainsMark",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "mark": {
+                        "name": "TM_SYSTEM_INFO"
+                    }
+                }
+            ]
         }
     },
     {
@@ -578,15 +681,7 @@
                 {
                     "index": 0,
                     "typeMatcher": {
-                        "_": "ClassMatcher",
-                        "packageMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "<default>:"
-                        },
-                        "classNameMatcher": {
-                            "_": "NameIsEqualTo",
-                            "name": "ArrayBuffer (?) string"
-                        }
+                        "_": "AnyTypeMatches"
                     }
                 },
                 {
@@ -615,7 +710,38 @@
             ]
         },
         "condition": {
-            "_": "ConstantTrue"
+            "_": "Or",
+            "args": [
+                {
+                    "_": "IsType",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "type": {
+                        "_": "ClassMatcher",
+                        "packageMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "<default>:"
+                        },
+                        "classNameMatcher": {
+                            "_": "NameIsEqualTo",
+                            "name": "ArrayBuffer"
+                        }
+                    }
+                },
+                {
+                    "_": "IsType",
+                    "position": {
+                        "_": "Argument",
+                        "number": 0
+                    },
+                    "type": {
+                        "_": "PrimitiveNameMatches",
+                        "name": "string"
+                    }
+                }
+            ]
         },
         "actionsAfter": [
             {
@@ -629,5 +755,50 @@
                 }
             }
         ]
+    },
+    {
+        "_": "MethodSink",
+        "ruleNote": "<internal:invalid-terminal-state>@fileIo_Stream",
+        "cwe": [
+        ],
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "fileIo:@ohos.file.fs"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "Stream"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
+                "name": "<end-of-the-universe>"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "PrimitiveNameMatches",
+                "name": "void"
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "Not",
+            "condition": {
+                "_": "ContainsMark",
+                "position": {
+                    "_": "This"
+                },
+                "mark": {
+                    "name": "TM-fileIo_Stream-#-Closed"
+                }
+            }
+        }
     }
 ]
