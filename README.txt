@@ -5,3 +5,8 @@ Translator usage example:
 Optional flags:
 --tcj:eou-name=<end-of-the-universe>
 --tcj:disable-eou
+
+
+-----
+
+Directory "src" contains basic testing infrastructure elements.

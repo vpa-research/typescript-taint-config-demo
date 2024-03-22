@@ -31,7 +31,7 @@ automaton fileIo
     static fun *.createStreamSync (path: string, mode: string): fileIo_Stream
     {
         if (mode == "r")                action ADD_MARK(result, TM_FILE_READONLY);
-        if (mode == "w" || mode == "a") action ADD_MARK(result, TM_FILE_WRITEONLY);
+        if (mode == "w" || "a" == mode) action ADD_MARK(result, TM_FILE_WRITEONLY);
 
         if (action VALUE_CONTAINS(path, "../"))
             action SINK_ALARM(CWE_23);

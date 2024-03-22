@@ -43,6 +43,10 @@ automaton fileIo_Stream
 
         // Finishing state validation is enabled by default.
         // Can be disabled via '--tcj:disable-eou' flag.
+
+        // State-dependent additional checks can be performed using this syntax:
+        if (fileIo_Stream(self)._state == Open)
+            action SINK_ALARM(ERR_...);
     }
     */
 
