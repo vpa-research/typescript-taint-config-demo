@@ -13,28 +13,28 @@ import js.common;
 // primary semantic types
 
 @package type relationalStore
-    is `:relationalStore:@ohos.data.relationalStore`  // #question: what?
+    is `:relationalStore:@ohos.data.relationalStore`
     for js_package
 {
 }
 
 
 @interface type relationalStore_ResultSet
-    is `ResultSet:relationalStore:@ohos.data.relationalStore`  // #question: what?
+    is `ResultSet:relationalStore:@ohos.data.relationalStore`
     for js_interface
 {
 }
 
 
 @interface type relationalStore_RdbStore
-    is `RdbStore:relationalStore:@ohos.data.relationalStore`  // #question: what?
+    is `RdbStore:relationalStore:@ohos.data.relationalStore`
     for js_interface
 {
 }
 
 
 @class type RdbPredicates
-    is `RdbPredicates:relationalStore:@ohos.data.relationalStore`  // #question: what?
+    is `RdbPredicates:relationalStore:@ohos.data.relationalStore`
     for js_class
 {
 }

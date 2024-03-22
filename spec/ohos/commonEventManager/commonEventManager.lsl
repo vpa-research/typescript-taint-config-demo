@@ -12,7 +12,6 @@ import js.common;
 
 // primary semantic types
 
-// @package equals @namespace ? or not ?
 @package type commonEventManager
     is `:commonEventManager:@ohos.commonEventManager`
     for js_package

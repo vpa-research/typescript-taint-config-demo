@@ -14,7 +14,7 @@ import js.common;
 
 
 @interface type Promise
-    is `Promise:<default>:es2018.promise.d.ts`  // #question: what?
+    is `Promise:<default>:es2018.promise.d.ts`
     for js_interface
 {
 }

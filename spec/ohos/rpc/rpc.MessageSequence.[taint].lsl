@@ -9,7 +9,6 @@ library std
 // imports
 
 import ohos/rpc/rpc;
-
 import ohos/rpc/rpc._taint_;
 
 
@@ -23,25 +22,19 @@ automaton rpc_MessageSequence
     initstate Open;
 
     shift Open -> self by [
-        // create,
         readInt,
     ];
 
 
+    static fun *.create (): rpc_MessageSequence
+    {
+        result = new rpc_MessageSequence(state = Open);
+    }
+
+
     fun *.readInt (@target self: rpc_MessageSequence): number
     {
-        // Can we close MessageSequence object ?
-        //if (action HAS_MARK(self, TM_OHOS_MESSAGE_SEQUENCE_CLOSED))
-        //    action SINK_ALARM(ERR_ohos_message_sequence_InvalidState);
-
         action ADD_MARK(result, TM_NOT_CHECKED_RANGE_OF_NUMBER);
     }
 
-
-    // Do we need to add original type MessageSequence for return type of this method ?
-    /* static fun *.create (@target self: rpc_MessageSequence): MessageSequence
-    {
-        action ADD_MARK(result, TM_OHOS_MESSAGE_SEQUENCE_OPENED);
-    }
-    */
 }

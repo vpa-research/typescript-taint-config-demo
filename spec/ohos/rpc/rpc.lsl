@@ -12,7 +12,6 @@ import js.common;
 
 // primary semantic types
 
-// @package equals @namespace ? or not ?
 @package type rpc
     is `:rpc:@ohos.rpc`
     for js_package

@@ -57,6 +57,13 @@ type js_class
 }
 
 
+@interface type Array
+    is `Array:<default>:`
+    for js_interface
+{
+}
+
+
 typealias number = int64; // #problem: not actually the case for ArkTS
 typealias boolean = bool; // #problem: not actually the case for ArkTS
 

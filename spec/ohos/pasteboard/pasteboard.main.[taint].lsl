@@ -9,7 +9,6 @@ library std
 // imports
 
 import ohos/pasteboard/pasteboard;
-
 import ohos/pasteboard/pasteboard._taint_;  // taint-related marks and CWE groups
 
 
@@ -36,7 +35,7 @@ automaton pasteboard
 
     fun *.getSystemPasteboard (@target self: pasteboard): pasteboard_SystemPasteboard
     {
-
+        // nothing ?
     }
 
 }

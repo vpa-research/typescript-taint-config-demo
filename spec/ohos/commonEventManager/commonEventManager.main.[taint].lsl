@@ -8,9 +8,9 @@ library std
 
 // imports
 
-import ohos/commonEventManager/commonEventManager;
 import ohos/base/base;
 import ohos/commonEvent/commonEventData;
+import ohos/commonEventManager/commonEventManager;
 import ohos/commonEventManager/commonEventManager._taint_;
 
 

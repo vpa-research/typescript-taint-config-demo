@@ -13,21 +13,21 @@ import js.common;
 // primary semantic types
 
 @package type pasteboard
-    is `:pasteboard:@ohos.pasteboard.d.ts`  // #question: what?
+    is `:pasteboard:@ohos.pasteboard.d.ts`
     for js_package
 {
 }
 
 
 @interface type PasteData
-    is `PasteData:pasteboard:@ohos.pasteboard.d.ts`  // #question: what?
+    is `PasteData:pasteboard:@ohos.pasteboard.d.ts`
     for js_interface
 {
 }
 
 
 @interface type pasteboard_SystemPasteboard
-    is `SystemPasteboard:pasteboard:@ohos.pasteboard.d.ts`  // #question: what?
+    is `SystemPasteboard:pasteboard:@ohos.pasteboard.d.ts`
     for js_interface
 {
 }

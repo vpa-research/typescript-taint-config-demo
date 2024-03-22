@@ -1,4 +1,5 @@
 //#! pragma: target=taint-config-json
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - should be EXACTLY this with spaces and everything!
 libsl "1.1.0";
 
 library std
@@ -9,7 +10,6 @@ library std
 // imports
 
 import ohos/file/fs;
-
 import ohos/file/fs._taint_;  // taint-related marks and CWE groups
 
 

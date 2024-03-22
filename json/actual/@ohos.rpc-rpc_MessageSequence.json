@@ -14,6 +14,57 @@
             },
             "functionName": {
                 "_": "NameIsEqualTo",
+                "name": "create"
+            },
+            "parametersMatchers": [
+            ],
+            "returnTypeMatcher": {
+                "_": "ClassMatcher",
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "rpc:@ohos.rpc"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "MessageSequence"
+                }
+            },
+            "applyToOverrides": false,
+            "functionLabel": null,
+            "modifier": -1,
+            "exclude": [
+            ]
+        },
+        "condition": {
+            "_": "ConstantTrue"
+        },
+        "actionsAfter": [
+            {
+                "_": "AssignMark",
+                "position": {
+                    "_": "Result"
+                },
+                "mark": {
+                    "name": "TM-rpc_MessageSequence-#-Open"
+                }
+            }
+        ]
+    },
+    {
+        "_": "MethodSource",
+        "methodInfo": {
+            "cls": {
+                "packageMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "rpc:@ohos.rpc"
+                },
+                "classNameMatcher": {
+                    "_": "NameIsEqualTo",
+                    "name": "MessageSequence"
+                }
+            },
+            "functionName": {
+                "_": "NameIsEqualTo",
                 "name": "readInt"
             },
             "parametersMatchers": [

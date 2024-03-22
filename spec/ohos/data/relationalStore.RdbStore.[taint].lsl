@@ -8,17 +8,15 @@ library std
 
 // imports
 
+import js.common;
 import ohos/data/relationalStore;
 import ts/lib/promise/promise;
-
-// import ohos/file/fs._taint_;  // taint-related marks and CWE groups
 
 
 // automata
 
 automaton relationalStore_RdbStore
 (
-    // #note: automata variables are not allowed (simple state only)
 )
 : relationalStore_RdbStore
 {
@@ -29,8 +27,7 @@ automaton relationalStore_RdbStore
     ];
 
 
-    // how correctly describe "columns?" ?
-    fun *.query (@target self: relationalStore_RdbStore, predicates: RdbPredicates, @nullable columns: array<string>): Promise
+    fun *.query (@target self: relationalStore_RdbStore, predicates: RdbPredicates, @nullable columns: Array<string>): Promise
     {
         result = new relationalStore_ResultSet(state = Open);
     }

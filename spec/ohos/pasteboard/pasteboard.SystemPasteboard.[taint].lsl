@@ -9,9 +9,8 @@ library std
 // imports
 
 import ohos/pasteboard/pasteboard;
-import ts/lib/promise/promise;
-
 import ohos/pasteboard/pasteboard._taint_;  // taint-related marks and CWE groups
+import ts/lib/promise/promise;
 
 
 // automata
@@ -32,7 +31,7 @@ automaton pasteboard_SystemPasteboard
     {
         // https://capec.mitre.org/data/definitions/637.html
         // https://cwe.mitre.org/data/definitions/267.html
-        // #question: I suppose this is CWE_267, but I don't sure
+        // #question: I suppose this is CWE 267, but I'm not sure
         if (action HAS_MARK(data, TM_STORE_SEVERITY_DATA_IN_PASTEBOARD))
             action SINK_ALARM(CWE_267);
     }

@@ -13,7 +13,7 @@ import js.common;
 // primary semantic types
 
 @interface type CommonEventPublishData
-    is `CommonEventPublishData:<default>:@ohos.base`  // #question: what?
+    is `CommonEventPublishData:<default>:@ohos.base`
     for js_interface
 {
 }

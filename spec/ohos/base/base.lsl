@@ -13,7 +13,7 @@ import js.common;
 // primary semantic types
 
 @interface type AsyncCallback
-    is `AsyncCallback:<default>:@ohos.base`  // #question: what?
+    is `AsyncCallback:<default>:@ohos.base`
     for js_interface
 {
 }

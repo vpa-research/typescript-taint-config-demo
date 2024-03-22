@@ -9,7 +9,6 @@ library std
 // imports
 
 import ohos/file/fs;
-
 import ohos/file/fs._taint_;  // taint-related marks and CWE groups
 
 
@@ -20,10 +19,7 @@ automaton fileIo
 )
 : fileIo
 {
-    initstate Initialized;
-
-    shift Initialized -> self by [
-    ];
+    initstate Initialized; // required
 
 
     static fun *.accessSync (path: string): boolean
