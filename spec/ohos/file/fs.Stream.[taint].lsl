@@ -49,19 +49,20 @@ automaton fileIo_Stream
 
     fun *.closeSync(@target self: fileIo_Stream): void
     {
-        // nothing?
+        // nothing
     }
 
 
+    @ConfigMethodInfo("applyToOverrides", true)  // #note: just a usage example
     fun *.flushSync(@target self: fileIo_Stream): void
     {
-        // nothing?
+        // nothing
     }
 
 
     fun *.readSync(@target self: fileIo_Stream,
                        buffer: ArrayBuffer,
-                       @nullable options: ReadOptions  // #problem: nullability
+                       @nullable options: ReadOptions  // #unsupported: nullability
                    ): number
     {
         if (action HAS_MARK(self, TM_FILE_WRITEONLY))
@@ -72,7 +73,7 @@ automaton fileIo_Stream
 
 
     fun *.writeSync(@target self: fileIo_Stream,
-                        buffer: sum_type<ArrayBuffer, string>,    // #problem: no sum-types
+                        buffer: sum_type<ArrayBuffer, string>,
                         @nullable options: WriteOptions
                     ): number
     {

@@ -23,7 +23,6 @@ automaton fileIo
     initstate Initialized;
 
     shift Initialized -> self by [
-        accessSync,
     ];
 
 

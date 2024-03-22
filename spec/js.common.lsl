@@ -20,7 +20,8 @@ type js_package
 }
 
 
-// #problem: a workaround
+// this is a workaround type for working with "union"-like types (like `string | number`).
+// WARNING: do not rename!
 type sum_type
     is `<internal>`
     for sum_type
@@ -50,12 +51,12 @@ type js_class
 
 
 @interface type ArrayBuffer
-    is `ArrayBuffer:<default>:`  // #question: what?
+    is `ArrayBuffer:<default>:`
     for js_interface
 {
 }
 
 
-typealias number = int64; // #problem: not actually the case
-typealias boolean = bool; // #problem: not actually the case
+typealias number = int64; // #problem: not actually the case for ArkTS
+typealias boolean = bool; // #problem: not actually the case for ArkTS
 
