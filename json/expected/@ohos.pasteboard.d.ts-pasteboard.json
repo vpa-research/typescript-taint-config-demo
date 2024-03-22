@@ -1,0 +1,60 @@
+[
+  {
+    "_": "MethodSource",
+    "methodInfo": {
+      "cls": {
+        "packageMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "pasteboard:@ohos.pasteboard.d.ts"
+        },
+        "classNameMatcher": {
+          "_": "NameIsEqualTo",
+          "name": ""
+        }
+      },
+      "functionName": {
+        "_": "NameIsEqualTo",
+        "name": "createPlainTextData"
+      },
+      "parametersMatchers": [
+        {
+          "index": 0,
+          "typeMatcher": {
+            "_": "PrimitiveNameMatches",
+            "name": "string"
+          }
+        }
+      ],
+      "returnTypeMatcher": {
+        "_": "ClassMatcher",
+        "packageMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "pasteboard:@ohos.pasteboard.d.ts"
+        },
+        "classNameMatcher": {
+          "_": "NameIsEqualTo",
+          "name": "PasteData"
+        }
+      },
+      "applyToOverrides": false,
+      "functionLabel": null,
+      "modifier": -1,
+      "exclude": [
+      ]
+    },
+    "condition": {
+      "_": "ConstantTrue"
+    },
+    "actionsAfter": [
+      {
+        "_": "AssignMark",
+        "position": {
+          "_": "Result"
+        },
+        "mark": {
+          "name": "TM_STORE_SEVERITY_DATA_IN_PASTEBOARD"
+        }
+      }
+    ]
+  }
+]

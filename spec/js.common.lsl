@@ -43,8 +43,22 @@ type object
 }
 
 
+type js_class
+    is `?`
+    for object
+{
+}
+
+
 @interface type ArrayBuffer
     is `ArrayBuffer:<default>:`
+    for js_interface
+{
+}
+
+
+@interface type Array
+    is `Array:<default>:`
     for js_interface
 {
 }
