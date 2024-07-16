@@ -20,15 +20,6 @@ type js_package
 }
 
 
-// this is a workaround type for working with "union"-like types (like `string | number`).
-// WARNING: do not rename!
-type sum_type
-    is `<internal>`
-    for sum_type
-{
-}
-
-
 type object
     is `?`
     for object
